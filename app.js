@@ -20,8 +20,7 @@ enter.addEventListener('click', () => {
  document.querySelector('#invitation').hidden = false;
  music.hidden = !songSource;
  window.scrollTo(0, 0);
- if (matchMedia('(max-width:600px)').matches) document.querySelector('#names').focus({preventScroll:true});
- else if (songSource) music.focus({preventScroll:true});
+ if (songSource) music.focus({preventScroll:true});
  if (songSource) { audio.currentTime = 0; audio.play().catch(updateMusic); }
 });
 music.addEventListener('click', () => {
@@ -29,4 +28,5 @@ music.addEventListener('click', () => {
  if (audio.paused) audio.play().catch(updateMusic);
  else audio.pause();
 });
+
 
